@@ -28,7 +28,7 @@ menti = menti(' 7425 0971', driver)  # change pin here!
 #### Execute mein.py
 
 * Choose your answers
-* Press "x" to reload and submit when reaching "Submitt" button
+* Press "x" to reload and submit when reaching "Submit" button
 * Press "q" to close and exit driver
 
 ## Help
