@@ -20,7 +20,7 @@
 ### Usage
 
 #### Set your PIN in main.py at:
-```
+```python
 # init Menti
 menti = menti(' 7425 0971', driver)  # change pin here!
 ```
