@@ -10,7 +10,7 @@
 
 * [Python3](https://www.python.org/downloads/)
 * Windows 10 (keypress detection doesn't work for Linux yet!)
-* [Selenium-Profiles](https://github.com/kaliiiiiiiiii/Selenium-Profiles) ([Undetected-Chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) and [selenium.webdriver](https://www.selenium.dev/documentation/webdriver/) not tested)
+* [Selenium-Profiles](https://github.com/kaliiiiiiiiii/Selenium_Profiles) ([Undetected-Chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) and [selenium.webdriver](https://www.selenium.dev/documentation/webdriver/) not tested)
 * Requirements.txt
 
 ### Installing
@@ -83,7 +83,7 @@ I am not responsible what you use the code for!!! Also no warranty!
 
 Inspiration, code snippets, etc.
 
-* [Selenium-Profiles](https://github.com/kaliiiiiiiiii/Selenium-Profiles)
+* [Selenium-Profiles](https://github.com/kaliiiiiiiiii/Selenium_Profiles)
 * [mentimeter.com](https://www.mentimeter.com/)
 * [Selenium](https://github.com/SeleniumHQ/selenium)
 * [selenium-documentation](https://www.selenium.dev/documentation/)
