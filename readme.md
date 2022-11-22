@@ -46,7 +46,10 @@ None yet
 
 * [x] clear_cookies
 * [x] detect_url based on PIN
-* [ ] automation for selecting; input, slider ..
+* [ ] automation for: 
+  * [ ] select
+  * [ ] type
+  * [ ] slider
 
 
 ## Deprecated
