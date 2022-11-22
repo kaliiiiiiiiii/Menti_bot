@@ -51,6 +51,7 @@ class menti(object):
                 if self.key_down(0x51):  # "q" pressed ==> quit
                     self.driver.quit()
                     raise ValueError("q pressed.. quitting!")
+                time.sleep(0.02)
             try:
                 self.sendkeys(Keys.ENTER)
             except:
