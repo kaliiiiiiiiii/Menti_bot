@@ -21,12 +21,37 @@
 
 #### Set your PIN in main.py at:
 ```python
+# sel_profiles import
+from sel_profiles.utils.utils import read_json
+from sel_profiles.driver import driver as mydriver
+
+# import menti
+from menti import menti
+
+# default profile for sel_profiles
+profile = read_json(filename="profiles\\default.json")
+profile = profile["Windows"]  # yet supported: "Android", "Windows"
+
+# start driver
+mydriver = mydriver()
+driver = mydriver.start(profile)
+
 # init Menti
-menti = menti(' 7425 0971', driver)  # change pin here!
+menti = menti('8867 2568', driver)  # change pin here!
+
+# loop 10 times
+for x in range(10):
+    menti.scales([15, 10])  # scale 1 = 15, scale 2 = 10
+    menti.submit_reload()  # submit and reload page
+
+# menti.word_cloud("myword")  # write "myword" into cloud field
+# menti.looper() # for not yet implemented methods
+
+driver.quit()  # don't forget to stop the driver!
+
 ```
 
-#### Execute mein.py
-
+###  using ``` menti.looper()```
 * Choose your answers
 * Press "x" to reload and submit when reaching "Submit" button
 * Press "q" to close and exit driver
@@ -47,9 +72,9 @@ None yet
 * [x] clear_cookies
 * [x] detect_url based on PIN
 * [ ] automation for: 
-  * [ ] select
-  * [ ] type
-  * [ ] slider
+  * [ ] multiple-choice
+  * [x] word-cloud
+  * [x] scales
 
 
 ## Deprecated

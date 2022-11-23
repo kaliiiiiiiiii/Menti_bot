@@ -14,4 +14,14 @@ mydriver = mydriver()
 driver = mydriver.start(profile)
 
 # init Menti
-menti = menti('7425 0971', driver)  # change pin here!
+menti = menti('8867 2568', driver)  # change pin here!
+
+# loop 10 times
+for x in range(10):
+    menti.scales([1, 20])  # scale 1 = 15, scale 2 = 10
+    menti.submit_reload()  # submit and reload page
+
+# menti.word_cloud("myword")  # write "myword" into cloud field
+# menti.looper() # for not yet implemented methods
+
+driver.quit()  # don't forget to stop the driver!
