@@ -20,7 +20,7 @@ driver = mydriver.start(profile)
 menti = menti('8867 2568', driver)  # change pin here!
 
 # loop 10 times
-for x in range(1000):
+for x in range(10):
     # menti.scales([1, 20])  # scale 1 = 15, scale 2 = 10
     time.sleep(0.2)
     menti.multiple_choice(1)  # choose nr. 2 of choices
