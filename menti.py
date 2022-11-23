@@ -23,7 +23,7 @@ class menti(object):
     def get_url(self):
         self.driver.get("https://www.menti.com/")
         self.driver.find_element(By.XPATH, '//*[@id="enter-vote-key"]').send_keys(self.pin + "\n")
-        time.sleep(4)
+        time.sleep(3)
         return self.driver.current_url
 
     def word_cloud(self, word: str):
@@ -31,8 +31,16 @@ class menti(object):
         for field in fields:
             field.send_keys(word)
 
+    def multiple_choice(self, choice: int):
+        # noinspection SpellCheckingInspection
+        choices = self.driver.find_elements(By.XPATH, '//*[starts-with(@data-testid,"choice")]')
+        if choice < 1:
+            raise ValueError("Choice needs to be positive!")
+        if len(choices) < choice:
+            raise ValueError("Can't choose choice "+str(choice)+" , only "+str(len(choices))+" choices available.")
+        choices[choice-1].click()
+
     def scales(self, values: list[float]):
-        time.sleep(0.5)
         sliders = self.driver.find_elements(By.XPATH, '//*[starts-with(@name,"scale-input")]')
         if not len(sliders) == len(values):
             raise ValueError("number of sliders must equal number of values!")
@@ -50,8 +58,6 @@ class menti(object):
                     "Value must be between " + str(mini) + " and " + str(maxi) + " !, got " + str(value) + " instead.")
             if not (value / step).is_integer():
                 raise ValueError("Value " + str(value) + " needs to be divisible by steps = " + str(step) + " !")
-
-            time.sleep(0.2)
 
             if start_val < value:
                 for x in range(round(int(((value - start_val) / step)))):
