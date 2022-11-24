@@ -16,6 +16,7 @@
 ### Installing
 
 * Install Requirements```pip install -r requirements.txt```
+* install Selenium_Profiles```pip install https://github.com/kaliiiiiiiiii/Selenium_Profiles/archive/refs/tags/v2.2.zip```
 
 ### Usage
 
