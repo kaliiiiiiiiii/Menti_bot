@@ -46,7 +46,7 @@ menti = menti('8867 2568', driver)  # change pin here!
 for x in range(10):
     # menti.scales([1, 20])  # scale 1 = 15, scale 2 = 10
     time.sleep(0.2)
-    menti.multiple_choice(1)  # choose nr. 2 of choices
+    menti.multiple_choice(1)  # choose nr. 1 of choices
     menti.submit_reload()  # submit and reload page
 
 # menti.word_cloud("myword")  # write "myword" into cloud field
