@@ -40,7 +40,7 @@ class menti(object):
             raise ValueError("Can't choose choice "+str(choice)+" , only "+str(len(choices))+" choices available.")
         choices[choice-1].click()
 
-    def scales(self, values: list[float]):
+    def scales(self, values: list):
         sliders = self.driver.find_elements(By.XPATH, '//*[starts-with(@name,"scale-input")]')
         if not len(sliders) == len(values):
             raise ValueError("number of sliders must equal number of values!")

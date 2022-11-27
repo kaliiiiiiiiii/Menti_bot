@@ -8,15 +8,13 @@
 
 ### Dependencies
 
-* [Python3](https://www.python.org/downloads/)
+* [Python>=3.7](https://www.python.org/downloads/)
 * Windows 10 (keypress detection doesn't work for Linux yet!)
-* [Selenium-Profiles](https://github.com/kaliiiiiiiiii/Selenium_Profiles) ([Undetected-Chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) and [selenium.webdriver](https://www.selenium.dev/documentation/webdriver/) not tested)
 * Requirements.txt
 
 ### Installing
 
 * Install Requirements```pip install -r requirements.txt```
-* install Selenium_Profiles```pip install https://github.com/kaliiiiiiiiii/Selenium_Profiles/archive/refs/tags/v2.2.zip```
 
 ### Usage
 
@@ -25,20 +23,15 @@
 import time
 
 # sel_profiles import
-from sel_profiles.utils.utils import read_json
-from sel_profiles.driver import driver as mydriver
+from selenium_profiles.driver import driver as mydriver
+from selenium_profiles import profiles
 
 # import menti
 from menti import menti
 
-# default profile for sel_profiles
-profile = read_json(filename="profiles\\default.json")
-profile = profile["Windows"]  # yet supported: "Android", "Windows"
-# profile["browser"]["headless"] = True
-
 # start driver
 mydriver = mydriver()
-driver = mydriver.start(profile)
+driver = mydriver.start(profiles.Windows())
 
 # init Menti
 menti = menti('8867 2568', driver)  # change pin here!
@@ -66,9 +59,6 @@ driver.quit()  # don't forget to stop the driver!
 ## Help
 
 Please feel free to open an issue or fork!
-```commandline
-# no helper info yet
-```
 
 ## Known Bugs
 

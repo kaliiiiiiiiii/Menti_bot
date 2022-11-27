@@ -1,7 +1,6 @@
 import time
 
 # sel_profiles import
-from selenium_profiles.utils.utils import read_json
 from selenium_profiles.driver import driver as mydriver
 from selenium_profiles import profiles
 
@@ -13,10 +12,10 @@ mydriver = mydriver()
 driver = mydriver.start(profiles.Windows())
 
 # init Menti
-menti = menti('8867 2568', driver)  # change pin here!
+menti = menti('3476 0352', driver)  # change pin here!
 
 # loop 10 times
-for x in range(0, 10):
+for x in range(-1, 10):
     # menti.scales([1, 20])  # scale 1 = 15, scale 2 = 10
     time.sleep(0.2)
     menti.multiple_choice(2)  # choose nr. 1 of choices
